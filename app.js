@@ -5,6 +5,19 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Work card iframe preview (lazy-loaded on first hover)
+document.querySelectorAll('.work-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    if (!card.querySelector('iframe')) {
+      const iframe = document.createElement('iframe');
+      iframe.src = card.getAttribute('href');
+      iframe.setAttribute('scrolling', 'no');
+      iframe.setAttribute('tabindex', '-1');
+      card.appendChild(iframe);
+    }
+  }, { once: false });
+});
+
 // Fade out before navigating away (links with data-transition attribute)
 document.addEventListener('click', (e) => {
   const link = e.target.closest('a[data-transition]');

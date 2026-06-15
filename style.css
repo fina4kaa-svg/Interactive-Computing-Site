@@ -23,95 +23,22 @@ body.visible {
   opacity: 1;
 }
 
-/* ── HOME 1 : HERO ─────────────────────────────────────────── */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 560px;
-}
-
-.hero-name {
-  position: absolute;
-  left: 10%;
-  top: 11.8%;
-}
-
-.name-row {
+/* ── SITE HEADER ───────────────────────────────────────────── */
+.site-header {
   display: flex;
   align-items: center;
-  line-height: 1;
+  padding: 20px 10%;
+  border-bottom: 1px solid #000;
 }
 
-.first-name {
-  font-size: clamp(40px, 5.87vw, 84.513px);
+.site-title-label {
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-
-.black-square {
-  width: clamp(32px, 4.72vw, 68px);
-  height: clamp(32px, 4.72vw, 68px);
-  background: #000;
-  flex-shrink: 0;
-  margin-left: clamp(40px, 6.94vw, 100px);
-}
-
-.last-name {
-  display: block;
-  font-size: clamp(90px, 13.16vw, 189.538px);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-  line-height: 1;
-  margin-top: -0.24em;
-}
-
-/* "WORKS →" enter link at bottom of hero */
-.hero-enter {
-  position: absolute;
-  bottom: 40px;
-  left: 10%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #000;
-}
-
-.hero-enter-label {
-  font-size: 11px;
-  font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
-.hero-enter-arrow {
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: #000;
-  position: relative;
-  transition: width 0.2s ease;
-}
-.hero-enter-arrow::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: -3px;
-  width: 7px;
-  height: 7px;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
-  transform: rotate(-45deg);
-}
-
-.hero-enter:hover .hero-enter-arrow {
-  width: 52px;
-}
-
-/* ── HOME 2 : WORKS ────────────────────────────────────────── */
+/* ── WORKS ─────────────────────────────────────────────────── */
 .works-section {
   border-top: 1px solid #000;
 }
@@ -125,16 +52,16 @@ body.visible {
 }
 
 .works-label {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .works-count {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.1em;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .works-grid {
@@ -153,18 +80,36 @@ body.visible {
   border-bottom: 1px solid #000;
   text-decoration: none;
   color: #000;
-  transition: background-color 0.1s, color 0.1s;
+  position: relative;
+  overflow: hidden;
 }
 
-.work-card:hover {
-  background-color: #000;
-  color: #fff;
+.work-card iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+}
+
+.work-card:hover iframe {
+  opacity: 1;
+}
+
+.work-card .work-num,
+.work-card .work-title {
+  position: relative;
+  z-index: 1;
 }
 
 .work-num {
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0.12em;
+  font-size: 130px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   opacity: 0.5;
 }
 
@@ -173,7 +118,7 @@ body.visible {
 }
 
 .work-title {
-  font-size: clamp(13px, 1.25vw, 18px);
+  font-size: clamp(16px, 1.8vw, 26px);
   font-weight: 700;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -221,6 +166,7 @@ body.visible {
   text-transform: uppercase;
 }
 
+
 /* ── FOOTER ────────────────────────────────────────────────── */
 .footer {
   border-top: 1px solid #000;
@@ -231,10 +177,10 @@ body.visible {
 }
 
 .footer-text {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 /* ── RESPONSIVE ────────────────────────────────────────────── */
