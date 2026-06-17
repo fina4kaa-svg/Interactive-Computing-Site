@@ -44,6 +44,7 @@ function setup() {
 }
 
 function draw() {
+  textFont('Arial Narrow');
   if      (gameState === "start")   drawStart();
   else if (gameState === "playing") drawPlaying();
   else if (gameState === "result")  drawResult();
