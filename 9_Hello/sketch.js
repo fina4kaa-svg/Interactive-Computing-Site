@@ -1,8 +1,11 @@
 let typingChars = [];
 let fallingChars = [];
 
+const HEADER_H = 110;
+
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(windowWidth, windowHeight - HEADER_H);
+  cnv.position(0, HEADER_H);
   colorMode(HSB);
   textFont('Comic Sans MS');
   textSize(60);
@@ -21,6 +24,14 @@ function draw() {
   ellipse(width / 2 + 150, 200, 300, 150);
   ellipse(width / 2 - 80, 150, 280, 150);
   ellipse(width / 2 + 80, 150, 280, 150);
+
+  textFont('Arial');
+  fill(30);
+  noStroke();
+  textAlign(CENTER, CENTER);
+  textSize(25);
+  text('type and enter', width / 2, 340);
+  textFont('Comic Sans MS');
 
   // 1. 타이핑 중인 글자 표시
   textSize(60);

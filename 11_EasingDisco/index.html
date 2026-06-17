@@ -15,9 +15,28 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">11. EASING DISCO</span>
+    <span class="works-count" id="desc-toggle">11. DISCO2</span>
   </header>
 
     <script src="sketch.js"></script>
+  
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;DISCO 2&gt;</p>
+      <p class="desc-main">Same disco ball, speeds up as you hold it with your mouse.</p>
+      <p class="desc-sub">같은 디스코볼이 마우스로 잡고 있으면 점점 빨라진다.</p>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <a href="../10_Disco/index.html" class="nav-link">< PREVIOUS</a>
+    <a href="../12_RSP/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>

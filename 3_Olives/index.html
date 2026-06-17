@@ -15,9 +15,28 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">03. OLIVES</span>
+    <span class="works-count" id="desc-toggle">03. OLIVES</span>
   </header>
 
     <script src="sketch.js"></script>
+  
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;OLIVES&gt;</p>
+      <p class="desc-main">Olives just keep spinning. I'm not sure why — but I kind of like it.</p>
+      <p class="desc-sub">올리브들이 그냥 계속 돈다. 왜인지 모르겠는데 — 그게 좋다.</p>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <a href="../2_Emotions/index.html" class="nav-link">< PREVIOUS</a>
+    <a href="../4_Jelly/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>

@@ -15,9 +15,28 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">02. EMOTIONS</span>
+    <span class="works-count" id="desc-toggle">02. EMOTIONS</span>
   </header>
 
     <script src="sketch.js"></script>
+  
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;EMOTIONS&gt;</p>
+      <p class="desc-main">Emotions change like colors — joy is warm, sadness is gray, anger is red, and fear fades into teal.</p>
+      <p class="desc-sub">감정은 색처럼 변한다 — 기쁨은 따뜻하고,<br>슬픔은 회색이고, 분노는 빨갛고,<br>두려움은 청록 속으로 사라진다.</p>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <a href="../1_Lobster/index.html" class="nav-link">< PREVIOUS</a>
+    <a href="../3_Olives/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>

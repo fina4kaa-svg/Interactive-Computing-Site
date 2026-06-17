@@ -15,9 +15,28 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">10. DISCO</span>
+    <span class="works-count" id="desc-toggle">10. DISCO</span>
   </header>
 
     <script src="sketch.js"></script>
+  
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;DISCO&gt;</p>
+      <p class="desc-main">A shiny pink disco ball.</p>
+      <p class="desc-sub">반짝이는 핑크 디스코볼.</p>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <a href="../9_Hello/index.html" class="nav-link">< PREVIOUS</a>
+    <a href="../11_EasingDisco/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>

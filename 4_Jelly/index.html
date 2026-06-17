@@ -15,9 +15,28 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">04. JELLY</span>
+    <span class="works-count" id="desc-toggle">04. HOOPS</span>
   </header>
 
     <script src="sketch.js"></script>
+  
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;HOOPS&gt;</p>
+      <p class="desc-main">Haribo's apple hoops. Reshuffled with every click.</p>
+      <p class="desc-sub">하리보 애플 풉스 젤리. 클릭할 때마다 새로 섞인다.</p>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <a href="../3_Olives/index.html" class="nav-link">< PREVIOUS</a>
+    <a href="../5_Melon/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>

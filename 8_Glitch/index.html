@@ -15,9 +15,28 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">08. GLITCH</span>
+    <span class="works-count" id="desc-toggle">08. GLITCH</span>
   </header>
 
     <script src="sketch.js"></script>
+  
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;GLITCH&gt;</p>
+      <p class="desc-main">Movement is a break from the mundane, turned to color.</p>
+      <p class="desc-sub">움직임은 일상으로부터의 탈출이고, 그것이 색이 된다.</p>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <a href="../7_Girl/index.html" class="nav-link">< PREVIOUS</a>
+    <a href="../9_Hello/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>

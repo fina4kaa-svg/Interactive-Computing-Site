@@ -15,9 +15,28 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">06. STEPS</span>
+    <span class="works-count" id="desc-toggle">06. STEPS</span>
   </header>
 
     <script src="sketch.js"></script>
+  
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;STEPS&gt;</p>
+      <p class="desc-main">Who is walking across the screen from my mouse?</p>
+      <p class="desc-sub">내 마우스를 따라 화면을 가로지르는 건 누구일까?</p>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <a href="../5_Melon/index.html" class="nav-link">< PREVIOUS</a>
+    <a href="../7_Girl/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>

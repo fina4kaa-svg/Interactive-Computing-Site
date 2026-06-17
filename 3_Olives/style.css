@@ -55,3 +55,74 @@ canvas {
 .site-title-label:hover {
   color: rgba(255, 255, 255, 0.5);
 }
+
+.works-count {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.works-count:hover {
+  color: rgba(255,255,255, 0.5);
+}
+
+.desc-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #449E47;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.desc-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.desc-content {
+  text-align: right;
+  word-break: keep-all;
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  max-width: 900px;
+}
+
+.desc-tag,
+.desc-main,
+.desc-sub {
+  font-size: 47px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.work-nav {
+  position: fixed;
+  bottom: 40px;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 9999;
+}
+
+.nav-link {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0em;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.4);
+}

@@ -197,6 +197,15 @@ function draw() {
   noStroke();
   fill(0, 100, 100);
   circle(mouseX, mouseY, 36);
+
+  colorMode(RGB, 255);
+  fill(220);
+  noStroke();
+  textFont('Arial');
+  textAlign(CENTER, CENTER);
+  textSize(25);
+  text('hover your mouse on the ball', width / 2, height / 2 + ballRadius + 100);
+  colorMode(HSB, 360, 100, 100, 1);
 }
 
 function windowResized() {

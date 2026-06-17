@@ -15,9 +15,27 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">01. LOBSTER</span>
+    <span class="works-count" id="desc-toggle">01. LOBSTER</span>
   </header>
 
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;LOBSTER&gt;</p>
+      <p class="desc-main">Lobster is me — hard on the outside, but softer than you'd think on the inside.</p>
+      <p class="desc-sub">랍스터는 나다. 겉은 딱딱하지만, 속은 생각보다 훨씬 부드럽다.</p>
+    </div>
+  </div>
+
     <script src="sketch.js"></script>
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <span></span>
+    <a href="../2_Emotions/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>

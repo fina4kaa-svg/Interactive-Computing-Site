@@ -16,9 +16,28 @@
 
   <header class="site-header">
     <a href="../index.html" class="site-title-label">Josephine Choi</a>
-    <span class="works-count">12. RSP</span>
+    <span class="works-count" id="desc-toggle">12. RSP</span>
   </header>
 
     <script src="sketch.js"></script>
+  
+  <div class="desc-overlay" id="desc-overlay">
+    <div class="desc-content">
+      <p class="desc-tag">&lt;RSP&gt;</p>
+      <p class="desc-main">Rock paper scissors against a computer. Show your hand and press space to play.</p>
+      <p class="desc-sub">컴퓨터랑 하는 가위바위보. 손을 보이고 스페이스바를 누르면 게임을 할 수 있다.</p>
+    </div>
+  </div>
+
+    <script>
+      document.getElementById('desc-toggle').addEventListener('click', function () {
+        document.getElementById('desc-overlay').classList.toggle('active');
+      });
+    </script>
+  
+  <nav class="work-nav">
+    <a href="../11_EasingDisco/index.html" class="nav-link">< PREVIOUS</a>
+    <a href="../13_RainyFace/index.html" class="nav-link">NEXT ></a>
+  </nav>
   </body>
 </html>
