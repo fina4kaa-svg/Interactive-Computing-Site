@@ -35,8 +35,9 @@ function setup() {
   positionCanvas(cnv);
   buildInfoDiv();
   pg = createGraphics(ceil(cw * 0.6), ceil(cw * 0.6));
-  frameRate(20);
+  frameRate(15);
   video = createCapture(VIDEO);
+  video.size(640, 480);
   video.hide();
   faceMesh.detectStart(video, r => { faces = r; });
   handPose.detectStart(video,  r => { hands = r; });
