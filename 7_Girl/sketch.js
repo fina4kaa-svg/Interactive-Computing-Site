@@ -1,4 +1,4 @@
-let img; 
+let img;
 let tiles = [];
 let tileSize;
 let cols = 15;
@@ -18,8 +18,8 @@ function setup() {
   document.body.style.background = '#FFA8EF';
 
   frameRate(15);
-  tileSize = 828 / cols;          
-  rows = round(1023 / tileSize); 
+  tileSize = 828 / cols;
+  rows = round(1023 / tileSize);
 
   image(img, 0, 0);
 
@@ -39,8 +39,8 @@ function setup() {
 
 function draw() {
   if(tiles.length > 0) {
-    let index = floor(random(tiles.length)); 
-    let tile = tiles[index]; 
+    let index = floor(random(tiles.length));
+    let tile = tiles[index];
 
     let midX = tile.x + tileSize / 2;
     let midY = tile.y + tileSize / 2;
@@ -55,13 +55,13 @@ function draw() {
     rect(tile.x, tile.y, ceil(tileSize), ceil(tileSize));
     colorMode(RGB, 255);
 
-    // ✅ 오른쪽: 이미지 + 20% 핑크 필터
+    // 오른쪽: 이미지 + 20% 핑크 필터
     let tileImg = img.get(tile.x, tile.y, ceil(tileSize), ceil(tileSize));
     image(tileImg, tile.x + 828, tile.y);
-    fill(255, 168, 239, 70); // #FFA8EF at 20% opacity
+    fill(255, 168, 239, 70);
     noStroke();
     rect(tile.x + 828, tile.y, ceil(tileSize), ceil(tileSize));
 
-    tiles.splice(index, 1); 
+    tiles.splice(index, 1);
   }
 }

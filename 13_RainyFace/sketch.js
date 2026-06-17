@@ -34,8 +34,8 @@ function setup() {
   let cnv = createCanvas(cw, ch);
   positionCanvas(cnv);
   buildInfoDiv();
-  pg = createGraphics(10, 10);
-  frameRate(30);
+  pg = createGraphics(ceil(cw * 0.6), ceil(cw * 0.6));
+  frameRate(20);
   video = createCapture(VIDEO);
   video.hide();
   faceMesh.detectStart(video, r => { faces = r; });
@@ -190,9 +190,8 @@ function draw() {
   // ── 6. pg에 실시간 영상 그리기 (get() 없음) ───────────────
   // pg 크기: dR이 25px 이상 바뀔 때만 재생성 (매 프레임 생성 방지)
   let desiredFw = ceil(dR * 2);
-  if (abs(pg.width - desiredFw) > 25) {
-    pg.remove();
-    pg = createGraphics(desiredFw, desiredFw);
+  if (abs(pg.width - desiredFw) > 200) {
+    pg.resizeCanvas(desiredFw, desiredFw);
   }
   let fw = pg.width; // 실제 pg 크기 기준으로 통일
 

@@ -1,10 +1,11 @@
 function setup() {
-	createCanvas(800, 1200);
+	createCanvas(windowWidth, windowHeight);
 	background(255);
 }
 
 function draw() {
 	background(0);
+	translate((width - 800) / 2, (height - 1200) / 2);
 	
 	fill(230);
   noStroke();

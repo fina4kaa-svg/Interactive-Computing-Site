@@ -16,49 +16,42 @@ canvas {
   display: block;
 }
 
-.back-btn {
+.site-header {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #000;
+  justify-content: space-between;
+  padding: 40px 10%;
+  background: #000;
   z-index: 9999;
-  mix-blend-mode: difference;
-  filter: invert(1);
 }
 
-.back-btn-arrow {
-  display: block;
-  width: 32px;
-  height: 1px;
-  background: #fff;
-  position: relative;
-  transition: width 0.2s ease;
-}
-.back-btn-arrow::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -3px;
-  width: 7px;
-  height: 7px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  transform: rotate(45deg);
-}
-
-.back-btn:hover .back-btn-arrow {
-  width: 52px;
-}
-
-.back-btn-label {
+.site-title-label {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.2em;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0em;
   text-transform: uppercase;
   color: #fff;
+  text-decoration: none;
+}
+
+.works-count {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.site-title-label {
+  transition: color 0.2s ease;
+}
+
+.site-title-label:hover {
+  color: rgba(255, 255, 255, 0.5);
 }

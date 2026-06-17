@@ -195,6 +195,12 @@ function draw() {
 	for (let s of steps) {
 		s.show();
 	}
+
+	fill(30);
+	noStroke();
+	textAlign(CENTER, CENTER);
+	textSize(25);
+	text('click to walk', width / 2, height / 4);
 }
 
 class BirdStep {

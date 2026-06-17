@@ -82,6 +82,7 @@ function draw() {
       drawCell(x, y, w);
     }
   }
+
 }
 
 function drawCell(x, y, w) {
