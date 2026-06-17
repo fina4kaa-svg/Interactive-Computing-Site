@@ -195,7 +195,7 @@ main:has(.site-header:hover) .work-num {
 }
 
 /* ── RESPONSIVE ────────────────────────────────────────────── */
-@media (max-width: 960px) {
+@media (max-width: 720px) {
   .works-grid {
     grid-template-columns: repeat(3, 1fr);
   }
